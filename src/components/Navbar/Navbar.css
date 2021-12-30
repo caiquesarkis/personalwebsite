@@ -1,34 +1,81 @@
-.navbar{
+.blog-link{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    background-color: rgb(216, 216, 216);
-}
-
-
-.navbar-item{
-    color:rgb(121, 121, 121);
-    text-align: center;
-    font-weight: 400;
-    list-style: none;
-    padding: 20px;
+    margin-left:1rem;
     text-decoration: none;
-    font-size: 18px;
-    width: 50px;
-    font-weight: 600;
-    height: 100%;
+    color:#E3E3E3;
+    font-family:  'Oswald', sans-serif;
+    font-size: 1.5rem;
+    border-right: 2px solid #E3E3E3;
+    padding: 10px;
+    
 }
 
-.navbar-item:hover{
-    background-color: rgb(88, 88, 88);
+.digital-garden-animated-text{
+    position: relative;
+    left: -50px;
+    display: flex;
+    align-items: center;
+}
+
+.digital-garden-block{
+    width: 210px;
+    height: 20px;
+    position: relative;
+    left: -160px;
+    background-color: #1F1F1F;
+    z-index: -1;
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+}
+.navbar-logo{
+    display: flex;
+    align-items: center;
+    padding: 25px;
 }
 
 
-.blog-button{
-    height: 100%;
+.navbar-logo p{
+    font-size: 1.5rem;
+    z-index: -10;
+    position: relative;
+    left: -350px;
+    transition: 1s left;
+    color: #81CA95;
+
 }
 
-.home-icon{
+.navbar-logo:hover p {
+    left: -145px;
+}
 
+
+
+.navbar-links a svg{
+    fill: #AAACAB;
+    height: 25px;
+    width: 25px;
+}
+
+.navbar-links a:hover svg{
+    fill: #E3E3E3;
+}
+
+.navbar-links a {
+    margin-right: 20px;
+}
+
+
+.navbar-links{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 5rem;
 }

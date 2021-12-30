@@ -8,6 +8,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "apollo-server": "^3.5.0",
+    "bootstrap-icons": "^1.7.2",
     "front-matter": "^4.0.2",
     "graphql": "^16.2.0",
     "markdown-json": "^1.6.0",
