@@ -1,5 +1,12 @@
 .BlogPost .remark li{
     border: none;
+    color:#E3E3E3;
+}
+
+.BlogPost .remark p{
+    color:#E3E3E3;
+    font-weight: 300;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .BlogPost .remark h1{
@@ -16,5 +23,12 @@
 }
 
 .BlogPost{
-    margin: 0 32px;
+    width: 70%;
+}
+
+
+.blog-post-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -6,7 +6,15 @@
     padding: 0;
 }
 
+.Blog #post-description{
+    color:#E3E3E3;
+    font-weight: 400;
+}
 
+.Blog .post-link{
+    color:#89B4F8;
+    font-weight: 700;
+}
 
 .Blog li{
     list-style: none;
@@ -23,6 +31,7 @@
 
 .Blog #post-tags{
     border-radius: 10px;
+    padding: 0 10px;
     background-color: yellow;
     width: fit-content;
 }

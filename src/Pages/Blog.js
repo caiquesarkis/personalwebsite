@@ -24,7 +24,7 @@ function Blog() {
   console.log(data)
   return (
     <div className="Blog">
-      <h1>Blog</h1>
+      <h1>Articles</h1>
       <ul>
         {data.posts.map((post,index) => {
           return (<li>
@@ -34,9 +34,7 @@ function Blog() {
               <p id="post-description">{post.Description}</p>
               <p id="post-tags">{post.Tags}</p>
 
-              <Link to={`/blog/${index+1}`}>Hello</Link>
-
-
+              <Link to={`/blog/${index+1}`} className='post-link'>Leia mais...</Link>
           </li>)
         })}
       </ul>

@@ -7,9 +7,23 @@
     color:#E3E3E3;
     font-family:  'Oswald', sans-serif;
     font-size: 1.5rem;
+    font-weight: 300;
     border-right: 2px solid #E3E3E3;
     padding: 10px;
     
+}
+
+.blog-link:hover{
+    animation: blink-carret 1s infinite  ;
+}
+
+@keyframes blink-carret {
+    0%{
+        border-right: 2px solid #E3E3E3;
+    }
+    100%{
+        border-right: 2px solid #1F1F1F;
+    }
 }
 
 .digital-garden-animated-text{
@@ -23,9 +37,10 @@
     width: 210px;
     height: 20px;
     position: relative;
-    left: -160px;
+    left: -180px;
     background-color: #1F1F1F;
     z-index: -1;
+    padding: 10px;
 }
 
 .navbar-container{
@@ -45,14 +60,14 @@
     font-size: 1.5rem;
     z-index: -10;
     position: relative;
-    left: -350px;
+    left: -365px;
     transition: 1s left;
     color: #81CA95;
 
 }
 
 .navbar-logo:hover p {
-    left: -145px;
+    left: -170px;
 }
 
 

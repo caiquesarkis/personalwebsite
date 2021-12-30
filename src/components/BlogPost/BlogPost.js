@@ -23,19 +23,18 @@ function BlogPost() {
     
     const posts = data.posts
     return (
-      <>
-      <div className='BlogPost'>
-          <h1>{posts[postId].Title}</h1>
-          {/* {posts[postId].Tags.split().map((Tag)=>{
-            return <span id="post-tags">{Tag}</span>
-          })} */}
-          
-          <ReactMarkdown className='remark'>
-              {posts[postId].Body}
-          </ReactMarkdown>
-          <Link to={`/blog`}>Return to blog</Link>
+      <div className='blog-post-container'>
+        <div className='BlogPost'>
+            <h1>{posts[postId].Title}</h1>
+            {/* {posts[postId].Tags.split().map((Tag)=>{
+              return <span id="post-tags">{Tag}</span>
+            })} */}
+            
+            <ReactMarkdown className='remark'>
+                {posts[postId].Body}
+            </ReactMarkdown>
+        </div>
       </div>
-      </>
     );
   }
   
