@@ -1,4 +1,4 @@
-ul{
+.Blog ul{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,7 +8,7 @@ ul{
 
 
 
-li{
+.Blog li{
     list-style: none;
     border-top: 1px solid rgb(124, 124, 124);
     width: 80%;
@@ -16,12 +16,12 @@ li{
 }
 
 
-#post-title{
+.Blog #post-title{
     font-size: 32px;
 }
 
 
-#post-tags{
+.Blog #post-tags{
     border-radius: 10px;
     background-color: yellow;
     width: fit-content;
@@ -34,14 +34,3 @@ li{
 
 
 
-.remark li{
-    border: none;
-}
-
-.remark h1{
-    font-size: 36px;
-}
-
-.remark{
-    border: 1px solid black;
-}

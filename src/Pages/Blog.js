@@ -1,8 +1,6 @@
 import { gql, useQuery } from '@apollo/client';
 import {Link} from 'react-router-dom'
-import ReactMarkdown from 'react-markdown'
 
-import Navbar from '../components/Navbar/Navbar'
 
 import './styles/Blog.css'
 
@@ -25,8 +23,7 @@ function Blog() {
   if (error) return `Error! ${error}`;
   console.log(data)
   return (
-    <div className="App">
-      <Navbar/>
+    <div className="Blog">
       <h1>Blog</h1>
       <ul>
         {data.posts.map((post,index) => {
@@ -36,9 +33,6 @@ function Blog() {
               </h1>
               <p id="post-description">{post.Description}</p>
               <p id="post-tags">{post.Tags}</p>
-              {/* <ReactMarkdown className='remark'>
-                  {post.Body}
-              </ReactMarkdown> */}
 
               <Link to={`/blog/${index+1}`}>Hello</Link>
 
