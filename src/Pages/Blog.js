@@ -27,7 +27,8 @@ function Blog() {
       <h1>Articles</h1>
       <ul>
         {data.posts.map((post,index) => {
-          return (<li>
+          return (
+          <li className='post-card'>
               <h1 id="post-title">
                 {post.Title}
               </h1>
