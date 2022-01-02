@@ -33,7 +33,11 @@ function Blog() {
                 {post.Title}
               </h1>
               <p id="post-description">{post.Description}</p>
-              <p id="post-tags">{post.Tags}</p>
+              <div className='div-tags-container'>
+                {post.Tags?.split(",").map((tag)=>{
+                  return <p id="post-tags">{tag}</p>
+                })}
+              </div>
 
               <Link to={`/blog/${index+1}`} className='post-link'>Leia mais...</Link>
           </li>)
