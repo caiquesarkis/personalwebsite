@@ -6,7 +6,7 @@ Tags: Javascript, HTML, Programming
 ---
 
 
-O que o iterador **forEach** faz? #flashcard  #programing 
+O que o iterador **forEach** faz?
 
 Esse método percorre um array, passando cada elemento para uma 'callback function'. Ela não retorna nada.
 
@@ -18,7 +18,7 @@ const seeNumbers = numbers.forEach(number => {
 });
 ```
 
----
+
 
 O que o iterador **Filter** faz? #flashcard  #programing 
 
@@ -33,7 +33,6 @@ const smallNumbers = randomNumbers.filter(randomNumber => {
 });
 ```
 
----
 
 O que o iterador **Map** faz? #flashcard  #programing 
 

@@ -8,7 +8,9 @@ Tags: Math
 ## Qual a relação da transformada com a função delta?
 Sabemos que 
 
-$$\tag{0} f(x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} F(k) e^{-ikx} dk$$   
+$$
+\tag{0} f(x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} F(k) e^{-ikx} dk
+$$   
 
 $$\tag{1}F(k) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} f(x) e^{ikx} dx$$ 
 

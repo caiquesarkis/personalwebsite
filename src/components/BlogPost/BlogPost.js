@@ -2,8 +2,22 @@ import { gql, useQuery } from '@apollo/client';
 import {useParams, Link} from "react-router-dom"
 import ReactMarkdown from 'react-markdown'
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
-import {atomDark} from 'react-syntax-highlighter/dist/esm/styles/prism'
+import {vscDarkPlus} from 'react-syntax-highlighter/dist/esm/styles/prism'
+import RemarkMathPlugin from 'remark-math';
 import './BlogPost.css'
+
+const _mapProps = (props) => ({
+  ...props,
+  escapeHtml: false,
+  plugins: [
+    RemarkMathPlugin
+  ],
+  renderers: {
+    ...props.renderers,
+    math: ({ value }) => `math: ${value}`,
+    inlineMath: ({ value }) => `inlineMath: ${value}`
+  }
+}); 
 
 function BlogPost() {
     const GET_POSTS = gql`
@@ -27,11 +41,7 @@ function BlogPost() {
     return (
       <div className='blog-post-container'>
         <div className='BlogPost'>
-            <h1>{posts[postId].Title}</h1>
-            {/* {posts[postId].Tags.split().map((Tag)=>{
-              return <span id="post-tags">{Tag}</span>
-            })} */}
-            
+            <h1>{posts[postId].Title}</h1>            
             <ReactMarkdown 
             className='remark'
             children={posts[postId].Body}
@@ -41,13 +51,13 @@ function BlogPost() {
                 return !inline && match ? (
                   <SyntaxHighlighter
                     children={String(children).replace(/\n$/, '')}
-                    style={atomDark}
+                    style={vscDarkPlus}
                     language={match[1].toLocaleLowerCase()}
                     PreTag="div"
-                    {...props}
+                    {..._mapProps(props)}
                   />
                 ) : (
-                  <code className={className} {...props}>
+                  <code className={className} {..._mapProps(props)}>
                     {children}
                   </code>
                 )
