@@ -1,6 +1,8 @@
 import { gql, useQuery } from '@apollo/client';
 import {useParams, Link} from "react-router-dom"
 import ReactMarkdown from 'react-markdown'
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
+import {atomDark} from 'react-syntax-highlighter/dist/esm/styles/prism'
 import './BlogPost.css'
 
 function BlogPost() {
@@ -30,9 +32,30 @@ function BlogPost() {
               return <span id="post-tags">{Tag}</span>
             })} */}
             
-            <ReactMarkdown className='remark'>
-                {posts[postId].Body}
+            <ReactMarkdown 
+            className='remark'
+            children={posts[postId].Body}
+            components={{
+              code({node, inline, className, children, ...props}) {
+                const match = /language-(\w+)/.exec(className || '')
+                return !inline && match ? (
+                  <SyntaxHighlighter
+                    children={String(children).replace(/\n$/, '')}
+                    style={atomDark}
+                    language={match[1].toLocaleLowerCase()}
+                    PreTag="div"
+                    {...props}
+                  />
+                ) : (
+                  <code className={className} {...props}>
+                    {children}
+                  </code>
+                )
+              }
+            }}>
             </ReactMarkdown>
+            
+
         </div>
       </div>
     );

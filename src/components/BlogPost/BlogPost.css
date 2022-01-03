@@ -8,6 +8,14 @@
     color:#5F97F6;
 }
 
+.BlogPost .remark{
+    color:#E3E3E3;
+}
+
+.BlogPost .remark pre{
+    box-shadow: 0px 0px 2px #89B4F8 ;
+}
+
 .BlogPost .remark strong{
     color:#81CA95;
 }
@@ -20,13 +28,12 @@
     line-height: 2rem;
 }
 
-.BlogPost .remark h1{
-    font-size: 30px;
-}
+
 .BlogPost .remark h2{
     font-size: 30px;
     text-align: left;
 }
+
 
 .BlogPost .post-tags{
     background-color: yellow;
