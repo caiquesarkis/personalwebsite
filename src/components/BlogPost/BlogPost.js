@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import {vscDarkPlus} from 'react-syntax-highlighter/dist/esm/styles/prism'
 import RemarkMathPlugin from 'remark-math';
+import rehypeRaw from 'rehype-raw'
 import './BlogPost.css'
 
 const _mapProps = (props) => ({
@@ -45,6 +46,7 @@ function BlogPost() {
             <ReactMarkdown 
             className='remark'
             children={posts[postId].Body}
+            rehypePlugins={[rehypeRaw]}
             components={{
               code({node, inline, className, children, ...props}) {
                 const match = /language-(\w+)/.exec(className || '')

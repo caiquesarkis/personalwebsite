@@ -15,7 +15,14 @@
 .BlogPost .remark pre{
     box-shadow: 0px 0px 2.5px #89B4F8 ;
     animation: infinite animatedShadow 10s;
+    transition: transform 1s;
 }
+
+.BlogPost .remark pre:hover{
+    transform: scale(1.09) ;
+    box-shadow: 0px 0px 11px #89B4F8 !important;
+}
+
 
 @keyframes animatedShadow {
     0%{
@@ -30,9 +37,12 @@
 }
 
 .BlogPost .remark code{
-    line-height: 2.5 !important;
     font-size: 18px !important;
 }
+
+
+
+
 
 .BlogPost .remark strong{
     color:#81CA95;

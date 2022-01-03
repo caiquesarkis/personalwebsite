@@ -1,6 +1,6 @@
 import { gql, useQuery } from '@apollo/client';
 import {Link} from 'react-router-dom'
-
+import Loading from '../components/Loading/Loading';
 
 import './styles/Blog.css'
 
@@ -19,8 +19,8 @@ function Blog() {
 
   const { loading, error, data } = useQuery(GET_POSTS);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return `Error! ${error}`;
+  if (loading) return <Loading/>;
+  if (error) return <Loading/>;
   console.log(data)
   return (
     <div className="Blog">

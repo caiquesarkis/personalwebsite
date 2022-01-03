@@ -22,7 +22,6 @@ A propriedade `display` alinha todos os elementos ao longo do eixo principal (X)
 ``` CSS
 div{
 	display: flex
-	
 	flex-wrap: wrap;
 }
 ```
@@ -34,9 +33,7 @@ Quando definimos apenas o elemento com a propriedade `flex` por padrão quando o
 ``` CSS
 div{
 	display: flex
-	
 	flex-wrap: wrap;
-	
 	flex-direction: row-reverse; 
 }
 ```
@@ -49,11 +46,8 @@ Se quisermos que o eixo principal seja o Y teremos que declarar `flex-direction`
 ``` CSS
 div{
 	display: flex
-	
 	flex-wrap: wrap;
-	
 	flex-direction: row; 
-	
 	align-items: baseline;
 	
 }
@@ -65,12 +59,9 @@ A propriedade  `align-items` diz respeito ao alinhamento dos objetos ao longo do
 
 ``` CSS
 div{
-	display: flex
-	
+	display: flex;
 	flex-wrap: wrap;
-	
 	flex-direction: row; 
-	
 	justify-content: space-between;
 	
 }
@@ -84,11 +75,9 @@ A propriedade  `justify-content` alinha os itens ao longo do eixo principal. Uma
 	display: flex;
 	width: 500;
 }
-
 .child_1{
 	flex-basis: 100px;
 }
-
 child_2{
 	flex-basis: 200px;
 }
@@ -102,7 +91,6 @@ A propriedade  `flex-basis` define o tamanho inicial do elemento filho. No exemp
 	flex-basis: 100px;
 	flex-grow: 2;
 }
-
 child_2{
 	flex-basis: 200px;
 	flex-grow: 1;
@@ -117,12 +105,10 @@ Os pesos associados a propriedade `flex-grow` dizem em termos de proporção rel
 	display: flex;
 	width: 500;
 }
-
 .child_1{
 	flex-basis: 300px;
 	flex-shrink: 2;
 }
-
 child_2{
 	flex-basis: 300px;
 	flex-shrink: 1;
