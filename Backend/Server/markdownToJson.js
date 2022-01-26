@@ -1,5 +1,7 @@
 const fs = require('fs');
 let fm = require('front-matter')
+
+
 function getFileNames(){
     var fileNames = []
     fs.readdirSync('../Posts/').forEach(file => {
